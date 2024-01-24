@@ -2,7 +2,8 @@
   "profiles": {
     "SharpRISCV": {
       "commandName": "Project",
-      "commandLineArgs": "-i test.s"
+      "commandLineArgs": "-i test.s",
+      "workingDirectory": "D:\\github\\SharpRISCV-add_pim-\\Example"
     },
     "PE Output": {
       "commandName": "Project",

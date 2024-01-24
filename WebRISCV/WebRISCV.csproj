@@ -18,5 +18,8 @@
   </ItemGroup>
   <PropertyGroup>
     <PublishIISAssets>true</PublishIISAssets>
+    <ApplicationIcon />
+    <OutputType>Exe</OutputType>
+    <StartupObject />
   </PropertyGroup>
 </Project>
