@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Text.RegularExpressions;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace SharpRISCV.Core
 {
@@ -332,6 +333,7 @@ namespace SharpRISCV.Core
         public static InstructionType IdentifyInstructionType(string instruction)
         {
             instruction = instruction.Trim();
+            instruction = instruction.Replace("\t", " ");
             if (string.IsNullOrEmpty(instruction))
                 return InstructionType.EmptyLine;
 

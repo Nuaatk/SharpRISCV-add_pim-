@@ -19,7 +19,9 @@ _start:
 
 # Setup the parameters to exit the program
 # and then call Linux to do it.
-
+	add	a5,a4,a5
+        lw	s0,44(sp)
+    	lbu	a5,-26(s0)
         addi    a0, x0, 0   # Use 0 return code
         addi    a7, x0, 93  # Service command code 93 terminates
         ecall               # Call linux to terminate the program
