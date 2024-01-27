@@ -1,13 +1,23 @@
-# SharpRISCV #
+# SharpRISCV补丁，解决了以下问题 #
+
 ## 增加数据段对.half类型的支持
 
 ![img2](./pic/img2.jpg)
 
 ​		测试.s代码位于Example
 
+## 增加指令中立即数对16进制数据的支持
 
+​		在MachineCode对立即数处理的ProcessSource函数中增加
 
-## 命令符与寄存器之间不能存在制表符
+```
+else if (Immediate.StartsWith("0x"))
+{
+    value = Convert.ToInt32(Immediate, 16);
+}
+```
+
+## opcode与寄存器之间不能存在制表符
 
 - 原因：string op = instruction.Split(' ')[0];在解析opcode的时候通过空格划分，识别不了制表符
 

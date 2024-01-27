@@ -2,8 +2,8 @@
   "profiles": {
     "SharpRISCV": {
       "commandName": "Project",
-      "commandLineArgs": "-i test.s",
-      "workingDirectory": "D:\\github\\SharpRISCV-add_pim-\\Example"
+      "commandLineArgs": "-i 8bit_add_8parallel.s",
+      "workingDirectory": "D:\\github\\SharpRISCV-add_pim-\\Example\\experiment_group\\add_parallel\\8bit"
     },
     "PE Output": {
       "commandName": "Project",
@@ -15,7 +15,8 @@
     },
     "ELF Output": {
       "commandName": "Project",
-      "commandLineArgs": "-i test.s -o out.elf -p elf"
+      "commandLineArgs": "-i 8bit_add_16parallel.s -o 8bit_add_16parallel.elf -p elf",
+      "workingDirectory": "D:\\github\\SharpRISCV-add_pim-\\Example\\experiment_group\\add_parallel\\16bit"
     }
   }
 }
